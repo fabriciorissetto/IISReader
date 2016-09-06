@@ -11,11 +11,11 @@ namespace IISReader.API.Controllers
     public class SitesController : ApiController
     {
         [HttpGet]
-        public IEnumerable<Site> Index([FromUri]List<string> filtroSites = null)
+        public IEnumerable<Site> Index([FromUri]List<string> filter = null)
         {
             var sitesFound = new Microsoft.Web.Administration.ServerManager()
                                     .Sites
-                                    .Where(x => filtroSites.Count == 0 || filtroSites.Any(y => x.Name.Contains(y)))
+                                    .Where(x => filter.Count == 0 || filter.Any(y => x.Name.Contains(y)))
                                     .ToList();
 
             for (int i = 0; i < sitesFound.Count(); i++)
