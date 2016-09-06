@@ -8,7 +8,7 @@ Example request:
 Response:
 
     [{
-        "Name": "anothersite.com",
+        "Name": "yoursite.com",
         "Projects": [{
             "Name": "WebPortal",
             "Environment": "",
@@ -18,3 +18,9 @@ Response:
             ]}
         ]
     }]
+
+## Swagger
+
+    http://localhost:53992/swagger
+
+![alt tag](https://github.com/fabriciorissetto/IISReader/blob/master/sample.png)
